@@ -1,0 +1,302 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* ==========================================================================\
+   1. FONTS & GLOBAL COLORS\
+   ========================================================================== */\
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');\
+@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Playfair+Display:wght@700&family=Rajdhani:wght@500;700&display=swap');\
+\
+body, #wrapper, #main, #content \{\
+    background-color: #fff3b0 !important;\
+    color: #4a2c2a !important; /* Deep Brown */\
+\}\
+\
+/* Typography Defaults */\
+body, p, li, .entry-content \{\
+    font-family: 'Lora', serif !important;\
+    font-size: 18px;\
+    line-height: 1.7;\
+\}\
+\
+h1, h2, h3, h4, .entry-title a \{\
+    font-family: 'Cinzel', serif !important;\
+    color: #8b0000 !important; /* Deep Crimson */\
+    font-weight: 700 !important;\
+    text-transform: uppercase;\
+\}\
+\
+/* ==========================================================================\
+   2. CLEANUP (Removing Defaults)\
+   ========================================================================== */\
+/* Hide page titles */\
+.page .post-title, .page .entry-title \{\
+    display: none !important;\
+\}\
+\
+/* Remove Mantra's default bullets */\
+.entry-content ul, .entry-content li \{\
+    list-style: none !important;\
+    list-style-type: none !important;\
+\}\
+\
+/* Hide Footer/Theme Credits */\
+div[style*="text-align:center"][style*="clear:both"] \{\
+    display: none !important;\
+    font-size: 0 !important;\
+\}\
+div[style*="text-align:center"] a[href*="cryoutcreations"],\
+div[style*="text-align:center"] a[href*="wordpress.org"] \{\
+    display: none !important;\
+\}\
+\
+/* Remove vertical gaps */\
+#container, .post, .page, .entry-content \{\
+    padding-top: 0 !important;\
+    margin-top: 0 !important;\
+\}\
+section:first-of-type \{\
+    margin-top: 0 !important;\
+    padding-top: 10px !important;\
+\}\
+\
+/* ==========================================================================\
+   3. HEADER CONSISTENCY (DESKTOP ONLY)\
+   ========================================================================== */\
+/* We wrap this in a Media Query so it DOES NOT affect Mobile */\
+@media only screen and (min-width: 801px) \{\
+    .page #header, .page #header-container, .page #branding, .page #bg_image,\
+    .events-archive #header, .events-gridview #header, .post-type-archive-tribe_events #header \{\
+        height: 375px !important;\
+        min-height: 375px !important;\
+        max-height: 375px !important;\
+        display: block !important;\
+    \}\
+\
+    /* Force Image to Fill Space on Desktop */\
+    .page #header-container > div, .page #branding img, \
+    .events-archive #branding img, .post-type-archive-tribe_events #branding img \{\
+        height: 375px !important;\
+        min-height: 375px !important;\
+        width: 100% !important;\
+        object-fit: cover !important;\
+    \}\
+\}\
+\
+#branding \{\
+    border-bottom: 3px solid #8b0000 !important;\
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);\
+\}\
+\
+/* ==========================================================================\
+   4. PRIMARY MENU (Desktop Consistency)\
+   ========================================================================== */\
+/* Force Cream Background everywhere */\
+#access, #masthead #access, .menu-main-container \{\
+    background: #fff3b0 !important;\
+    background-image: none !important;\
+    border-top: 1px solid rgba(139, 0, 0, 0.1) !important;\
+    border-bottom: 1px solid rgba(139, 0, 0, 0.1) !important;\
+    width: 100% !important;\
+    box-shadow: none !important;\
+    filter: none !important;\
+\}\
+\
+/* Desktop Menu Layout */\
+@media only screen and (min-width: 1101px) \{\
+    #access .menu, #access ul \{\
+        width: 100% !important;\
+        display: flex !important;\
+        justify-content: center !important;\
+        margin: 0 !important;\
+        padding: 10px 0 !important;\
+    \}\
+\
+    #access ul li \{\
+        position: relative !important;\
+        margin: 0 2px !important;\
+    \}\
+\
+    #access ul li a \{\
+        font-family: 'Cinzel', serif !important;\
+        color: #4a2c2a !important;\
+        font-weight: 700 !important;\
+        padding: 0 20px !important;\
+        font-size: 18px !important;\
+        letter-spacing: -0.2px;\
+        text-decoration: none !important;\
+        transition: all 0.4s ease;\
+    \}\
+\
+    /* Desktop Sub-Menus (Fix for Pop-out) */\
+    #access ul ul \{\
+        position: absolute !important;\
+        display: none !important;\
+        top: 100% !important;\
+        left: 0 !important;\
+        min-width: 200px !important;\
+        background: #fff3b0 !important;\
+        flex-direction: column !important;\
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);\
+        z-index: 9999 !important;\
+    \}\
+\
+    #access ul li:hover > ul \{\
+        display: flex !important;\
+    \}\
+    \
+    #access ul ul li a \{\
+        padding: 12px 20px !important;\
+        font-size: 16px !important;\
+        text-align: left !important;\
+        width: 100% !important;\
+    \}\
+    \
+    /* Hover Effects */\
+    #access ul li a:hover, #access ul li.current-menu-item a \{\
+        color: #8b0000 !important;\
+        background: rgba(139, 0, 0, 0.05) !important;\
+    \}\
+    \
+    /* Hide Custom Mobile Button on Desktop */\
+    .custom-mobile-btn \{ display: none !important; \}\
+\}\
+\
+/* ==========================================================================\
+   5. SOCIAL ICONS & FOOTER\
+   ========================================================================== */\
+#smenul img \{\
+    filter: sepia(1) saturate(4) hue-rotate(345deg) brightness(0.4) contrast(1.2) !important;\
+    width: 32px;\
+    transition: all 0.3s ease;\
+    opacity: 0.85;\
+\}\
+#smenul a:hover img \{\
+    filter: sepia(1) saturate(6) hue-rotate(345deg) brightness(0.3) contrast(1.4) !important;\
+    transform: scale(1.1) translateX(5px);\
+    opacity: 1;\
+\}\
+#smenul a \{ margin-bottom: 15px !important; display: block !important; \}\
+\
+#footer2 .footermenu \{\
+    width: 100%;\
+    text-align: center !important;\
+    padding: 15px 0 !important;\
+    border-bottom: 1px solid rgba(74, 44, 42, 0.1);\
+\}\
+#footer2 .footermenu ul \{\
+    display: flex !important;\
+    justify-content: center !important;\
+    flex-wrap: wrap !important;\
+\}\
+#footer2 .footermenu ul li a \{\
+    font-family: 'Lora', serif !important;\
+    font-size: 15px !important;\
+    color: #4a2c2a !important;\
+    padding: 5px 15px !important;\
+    border-right: 1px solid rgba(74, 44, 42, 0.3);\
+\}\
+#footer2 .footermenu ul li a:hover \{\
+    color: #8b0000 !important;\
+    background: rgba(74, 44, 42, 0.03);\
+\}\
+\
+/* ==========================================================================\
+   6. MOBILE RESPONSIVENESS (RESTORED ORIGINAL LOGIC)\
+   ========================================================================== */\
+\
+/* 1. Reset Header Height on Mobile to be Natural */\
+@media only screen and (max-width: 800px) \{\
+    #header, #header-container, #branding, #branding img \{\
+        height: auto !important;\
+        min-height: 0 !important;\
+        max-height: none !important;\
+    \}\
+    \
+    /* Center the footer menu on mobile */\
+    #footer2 .footermenu ul \{ flex-direction: column !important; align-items: center !important; \}\
+    #footer2 .footermenu ul li a \{ border-right: none !important; border-bottom: 1px solid rgba(74, 44, 42, 0.1); width: 100%; padding: 10px 0 !important; \}\
+    #footer2 .footermenu ul li:last-child a \{ border-bottom: none !important; \}\
+\}\
+\
+/* 2. Mobile Menu (Matches your original working CSS) */\
+@media only screen and (max-width: 1100px) \{\
+    /* Style our custom button for Mobile */\
+    .custom-mobile-btn \{\
+        display: block !important;\
+        width: 100%;\
+        background: #4a2c2a !important; /* Brown */\
+        color: #fff3b0 !important;      /* Cream */\
+        padding: 15px;\
+        font-family: 'Cinzel', serif;\
+        font-size: 18px;\
+        border: none;\
+        cursor: pointer;\
+        text-align: center;\
+        font-weight: bold;\
+        text-transform: uppercase;\
+        margin-top: 10px;\
+        margin-bottom: 0px;\
+    \}\
+\
+    /* Hide the menu by default on mobile */\
+    #access \{\
+        display: none !important;\
+    \}\
+\
+    /* Show the menu when the button is clicked (class added by script) */\
+    #access.open-mobile \{\
+        display: block !important;\
+        width: 100% !important;\
+        margin-top: 0 !important;\
+        border-top: 1px solid #4a2c2a;\
+    \}\
+\
+    /* Make menu items stack vertically and look clean */\
+    #access ul, #access .menu \{\
+        display: block !important;\
+        width: 100% !important;\
+    \}\
+\
+    #access ul li \{\
+        width: 100% !important;\
+        float: none !important;\
+        border-bottom: 1px solid rgba(74, 44, 42, 0.1);\
+    \}\
+\
+    #access ul li a \{\
+        background: #fff3b0 !important;\
+        color: #4a2c2a !important;\
+        padding: 15px !important;\
+        text-align: center !important;\
+        display: block;\
+    \}\
+    \
+    /* Ensure sub-menus show up on mobile */\
+    #access ul ul \{\
+        display: block !important;\
+        position: static !important;\
+        background: rgba(0,0,0,0.03) !important;\
+        box-shadow: none !important;\
+    \}\
+\
+    /* Hide the theme's default mobile menu toggle & text */\
+    #nav-toggle, .menu-toggle, #mobile-nav, #mobile-menu-text \{\
+        display: none !important;\
+    \}\
+\}\
+\
+@media only screen and (max-width: 480px) \{\
+    table \{ display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; \}\
+    .whitespace-nowrap \{ font-size: 10px !important; \}\
+\}\
+\
+/* Button & Link Hover Fixes */\
+a[style*="background-color: #8b0000"]:hover \{\
+    color: #ffffff !important;\
+    text-decoration: none !important;\
+\}}
